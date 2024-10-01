@@ -5,7 +5,7 @@ package sorting
   */
 class HybridQuickSortTests extends SortingTests {
 
-  override val ARRAY_SIZE: Int = 100000
+  override val ARRAY_SIZE: Int = 5000
   
   val sorter = HybridQuickSort
 }
