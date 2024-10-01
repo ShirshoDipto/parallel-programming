@@ -1,4 +1,5 @@
 package examples
+import sorting.ArrayUtil
 
 import java.util.concurrent.locks.ReentrantLock
 
@@ -12,6 +13,8 @@ object StartAndWaitExample {
   val lock = new ReentrantLock()
   val TOTAL = 100 
   var counter = 0
+
+  var counterArray = Array.empty[Int]
   
   def main(args: Array[String]): Unit = {
     
@@ -22,6 +25,8 @@ object StartAndWaitExample {
       pool.async(_ => {
         lock.lock()
         counter += 1
+        println(s"Counter is $counter")
+        counterArray = counterArray :+ counter
         lock.unlock()
       })
     }
@@ -38,7 +43,7 @@ object StartAndWaitExample {
 
     // Check the result
     assert(counter == TOTAL)
+    assert(ArrayUtil.checkSorted(counterArray))
     println(s"All good!")
-  } 
-
+  }
 }

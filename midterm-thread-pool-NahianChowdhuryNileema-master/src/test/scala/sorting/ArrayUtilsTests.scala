@@ -5,7 +5,7 @@ class ArrayUtilsTests extends FunSpec with Matchers{
 
   describe(s"Tests the utilities related to sorting") {
     it ("Checks if the array is sorted") {
-      val testCases = Seq(
+      val testCases = Array(
         (Array(1, 2, 3, 4, 5), true),
         (Array(5, 4, 3, 2, 1), false),
         (Array(1, 1, 1, 1, 1), true),

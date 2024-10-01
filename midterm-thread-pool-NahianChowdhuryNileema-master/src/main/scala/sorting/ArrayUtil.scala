@@ -10,7 +10,7 @@ object ArrayUtil {
 
 
   /**
-    * Swaps elements with indices `i` and `j` in a n array `a`.
+    * Swaps elements with indices `i` and `j` in an array `a`.
     *
     * Ensures that both `i` and `j` are in `a`'s range and throws an
     * exception otherwise.
@@ -111,5 +111,7 @@ object ArrayUtil {
   def main(args: Array[String]): Unit = {
     val _array = generateRandomArrayOfInts(10)
     println(_array.mkString("[", ", ", "]"))
+
+    println(checkSorted(Array(1)))
   }
 }

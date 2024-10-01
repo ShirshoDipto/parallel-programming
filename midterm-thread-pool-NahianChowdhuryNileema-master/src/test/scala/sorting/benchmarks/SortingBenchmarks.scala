@@ -36,7 +36,6 @@ object SortingBenchmarks {
     // Only if you feel brave and have time for this...
     // Running for size 20000000
     runComparison(20000000)
-
   }
 
   private def runComparison(size: Int, warmed : Boolean = true) = {
@@ -57,15 +56,15 @@ object SortingBenchmarks {
   private def runBenchmark(sorter: Sorting, arr: Array[Int], warmed: Boolean = true) = {
     // Let's make sure we won't mess up the original array
     val a = ArrayUtil.arrayCopy(arr)
-    if (warmed) {
-      print(s"${sorter.getName}: ")
-    }
+//    if (warmed) {
+//      print(s"${sorter.getName}: ")
+//    }
     val t1: Long = System.currentTimeMillis()
     sorter.sort(a)
     val t2: Long = System.currentTimeMillis()
     if (warmed) {
       val formatter = java.text.NumberFormat.getIntegerInstance
-      println(s"${formatter.format(t2 - t1)} ms")
+      println(s"${sorter.getName}: ${formatter.format(t2 - t1)} ms")
     }
   }
 }

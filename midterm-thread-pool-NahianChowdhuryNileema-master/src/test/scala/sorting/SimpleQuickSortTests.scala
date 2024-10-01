@@ -5,7 +5,7 @@ package sorting
   */
 class SimpleQuickSortTests extends SortingTests {
   
-  override val ARRAY_SIZE: Int = 50000
+  override val ARRAY_SIZE: Int = 15000000
 
   val sorter = SimpleQuickSort
 }
