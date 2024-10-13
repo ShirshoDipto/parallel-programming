@@ -150,9 +150,79 @@ trait HashCollisionTests extends FunSpec with Matchers {
   }
 
   describe(s"Concurrent multi-set ${this.getClass.getName}") {
-    it(s"should count the duplicates correctly for ${this.getClass.getName}") {
+    it("should handle adding and removing at the same time. Multiple adders, removers, and checkers") {
+      // TODO: Implement me by overloading .hashCode in MyObject
       ThreadID.reset()
       val printStats = true
+
+      val NUM_THREADS = 4
+      val INPUT_SIZE = 6000
+      val set = mkCollisionFreeSet
+
+      val inputs = (for (i <- 0 until NUM_THREADS) yield {
+        // Create a list whose size is INPUT_SIZE and fill it with
+        // random numbers between 1 and 10.
+        // This makes sure that the list has duplicates
+        List.fill(INPUT_SIZE)(new MyObject(i, Random.nextInt(10) + 1))
+      }).toList
+
+      val adders = for (in <- inputs) yield new Adder(set, in)
+      val checkers = for (in <- inputs) yield new Checker(set, in)
+      val remover = for (in <- inputs) yield new Remover(set, in)
+
+      val t1 = System.currentTimeMillis()
+      for (t <- adders) t.start()
+      for (t <- remover) t.start()
+      for (t <- checkers) t.start()
+
+      for (t <- adders) t.join()
+      for (t <- remover) t.join()
+      for (t <- checkers) t.join()
+      val t2 = System.currentTimeMillis()
+
+      set.printList()
+
+      val allWitnessed = checkers.map(_.witnessed).toSet.flatten
+      val allRemoved = remover.flatMap(_.removed).toSet
+
+      for (r <- allRemoved) {
+        assert(!set.contains(r))
+      }
+
+      for (r <- allWitnessed if !allRemoved.contains(r)) {
+        assert(set.contains(r))
+      }
+
+      val input = inputs.flatten
+      for (e <- input) {
+        assert(
+          set.contains(e) && !allRemoved.contains(e) ||
+            allRemoved.contains(e) && !set.contains(e)
+        )
+      }
+
+      val formatter = java.text.NumberFormat.getIntegerInstance
+
+      val timeAdd = adders.map(_.time).sum
+      val timeRemove = remover.map(_.time).sum
+      val timeCheck = checkers.map(_.time).sum
+
+      if (printStats) {
+        println()
+        println(s"Statistics for ${set.getClass.getName}, multi-set:")
+        println(s"Number of threads: ${NUM_THREADS * 2 + 1}")
+        println(s"Input size:        ${input.size}")
+        println(s"Adding time:       ${formatter.format(timeAdd)} ms")
+        println(s"Removing time:     ${formatter.format(timeRemove)} ms")
+        println(s"Checking time:     ${formatter.format(timeCheck)} ms")
+        println(s"Total time:        ${formatter.format(t2 - t1)} ms")
+      }
+    }
+  }
+
+  describe(s"Concurrent multi-set ${this.getClass.getName}") {
+    it(s"should count the duplicates correctly for ${this.getClass.getName}") {
+      ThreadID.reset()
 
       val NUM_THREADS = 4
       val INPUT_SIZE = 6000

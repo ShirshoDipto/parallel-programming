@@ -142,20 +142,19 @@ class OptimisticDupList[T] extends ConcurrentMultiSet[T] {
   /** A count of items equals to item in the list
     */
   def count(item: T): Int = {
-    // TODO: Implement me!
     val key = item.hashCode()
     var count = 0
     var curr = head.next
 
-    while (curr.key <= key) {
-      curr.lock()
+    while (curr != null && curr.key <= key) {
+//      curr.lock()
       try {
         if (curr.key == key && curr.item == item) {
           count += 1
         }
         curr = curr.next
       } finally {
-        curr.unlock()
+//        curr.unlock()
       }
     }
     count
