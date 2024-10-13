@@ -1,0 +1,181 @@
+{
+    "version": "1.4.0",
+    "project": {
+        "name": "prg04-multisets-nahianchowdhurynileema-master",
+        "directory": "/Users/shirshodipto/Documents/repos/parallel-programming/prg04-multisets-NahianChowdhuryNileema-master",
+        "workspaceDir": "/Users/shirshodipto/Documents/repos/parallel-programming/prg04-multisets-NahianChowdhuryNileema-master",
+        "sources": [
+            "/Users/shirshodipto/Documents/repos/parallel-programming/prg04-multisets-NahianChowdhuryNileema-master/src/main/scala",
+            "/Users/shirshodipto/Documents/repos/parallel-programming/prg04-multisets-NahianChowdhuryNileema-master/src/main/scala-2.12",
+            "/Users/shirshodipto/Documents/repos/parallel-programming/prg04-multisets-NahianChowdhuryNileema-master/src/main/scala-2",
+            "/Users/shirshodipto/Documents/repos/parallel-programming/prg04-multisets-NahianChowdhuryNileema-master/src/main/java",
+            "/Users/shirshodipto/Documents/repos/parallel-programming/prg04-multisets-NahianChowdhuryNileema-master/target/scala-2.12/src_managed/main"
+        ],
+        "dependencies": [
+            
+        ],
+        "classpath": [
+            "/Users/shirshodipto/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.16/scala-library-2.12.16.jar",
+            "/Users/shirshodipto/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/commons-io/commons-io/2.4/commons-io-2.4.jar"
+        ],
+        "out": "/Users/shirshodipto/Documents/repos/parallel-programming/prg04-multisets-NahianChowdhuryNileema-master/.bloop/prg04-multisets-nahianchowdhurynileema-master",
+        "classesDir": "/Users/shirshodipto/Documents/repos/parallel-programming/prg04-multisets-NahianChowdhuryNileema-master/.bloop/prg04-multisets-nahianchowdhurynileema-master/scala-2.12/classes",
+        "resources": [
+            "/Users/shirshodipto/Documents/repos/parallel-programming/prg04-multisets-NahianChowdhuryNileema-master/src/main/resources",
+            "/Users/shirshodipto/Documents/repos/parallel-programming/prg04-multisets-NahianChowdhuryNileema-master/target/scala-2.12/resource_managed/main"
+        ],
+        "scala": {
+            "organization": "org.scala-lang",
+            "name": "scala-compiler",
+            "version": "2.12.16",
+            "options": [
+                
+            ],
+            "jars": [
+                "/Users/shirshodipto/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.16/scala-library-2.12.16.jar",
+                "/Users/shirshodipto/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.12.16/scala-compiler-2.12.16.jar",
+                "/Users/shirshodipto/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.12.16/scala-reflect-2.12.16.jar",
+                "/Users/shirshodipto/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.12/1.0.6/scala-xml_2.12-1.0.6.jar",
+                "/Users/shirshodipto/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/jline/jline/2.14.6/jline-2.14.6.jar"
+            ],
+            "setup": {
+                "order": "mixed",
+                "addLibraryToBootClasspath": true,
+                "addCompilerToClasspath": false,
+                "addExtraJarsToClasspath": false,
+                "manageBootClasspath": true,
+                "filterLibraryFromClasspath": true
+            }
+        },
+        "java": {
+            "options": [
+                
+            ]
+        },
+        "test": {
+            "frameworks": [
+                {
+                    "names": [
+                        "org.scalacheck.ScalaCheckFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "org.specs2.runner.Specs2Framework",
+                        "org.specs2.runner.SpecsFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "org.specs.runner.SpecsFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "org.scalatest.tools.Framework",
+                        "org.scalatest.tools.ScalaTestFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "com.novocode.junit.JUnitFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "munit.Framework"
+                    ]
+                }
+            ],
+            "options": {
+                "excludes": [
+                    
+                ],
+                "arguments": [
+                    
+                ]
+            }
+        },
+        "platform": {
+            "name": "jvm",
+            "config": {
+                "home": "/Users/shirshodipto/Library/Caches/Coursier/arc/https/github.com/adoptium/temurin17-binaries/releases/download/jdk-17%252B35/OpenJDK17-jdk_aarch64_mac_hotspot_17_35.tar.gz/jdk-17+35/Contents/Home",
+                "options": [
+                    "-Duser.dir=/Users/shirshodipto/Documents/repos/parallel-programming/prg04-multisets-NahianChowdhuryNileema-master"
+                ]
+            },
+            "mainClass": [
+                
+            ],
+            "runtimeConfig": {
+                "home": "/Users/shirshodipto/Library/Caches/Coursier/arc/https/github.com/adoptium/temurin17-binaries/releases/download/jdk-17%252B35/OpenJDK17-jdk_aarch64_mac_hotspot_17_35.tar.gz/jdk-17+35/Contents/Home",
+                "options": [
+                    "-Duser.dir=/Users/shirshodipto/Documents/repos/parallel-programming/prg04-multisets-NahianChowdhuryNileema-master"
+                ]
+            },
+            "classpath": [
+                "/Users/shirshodipto/Documents/repos/parallel-programming/prg04-multisets-NahianChowdhuryNileema-master/.bloop/prg04-multisets-nahianchowdhurynileema-master/scala-2.12/classes",
+                "/Users/shirshodipto/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.16/scala-library-2.12.16.jar",
+                "/Users/shirshodipto/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/commons-io/commons-io/2.4/commons-io-2.4.jar"
+            ]
+        },
+        "resolution": {
+            "modules": [
+                {
+                    "organization": "org.scala-lang",
+                    "name": "scala-library",
+                    "version": "2.12.16",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scala-library",
+                            "path": "/Users/shirshodipto/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.16/scala-library-2.12.16.jar"
+                        },
+                        {
+                            "name": "scala-library",
+                            "classifier": "sources",
+                            "path": "/Users/shirshodipto/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.16/scala-library-2.12.16-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "commons-io",
+                    "name": "commons-io",
+                    "version": "2.4",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "commons-io",
+                            "path": "/Users/shirshodipto/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/commons-io/commons-io/2.4/commons-io-2.4.jar"
+                        },
+                        {
+                            "name": "commons-io",
+                            "classifier": "sources",
+                            "path": "/Users/shirshodipto/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/commons-io/commons-io/2.4/commons-io-2.4-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang",
+                    "name": "scala-library",
+                    "version": "2.12.16",
+                    "configurations": "optional",
+                    "artifacts": [
+                        {
+                            "name": "scala-library",
+                            "path": "/Users/shirshodipto/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.16/scala-library-2.12.16.jar"
+                        },
+                        {
+                            "name": "scala-library",
+                            "classifier": "sources",
+                            "path": "/Users/shirshodipto/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.16/scala-library-2.12.16-sources.jar"
+                        }
+                    ]
+                }
+            ]
+        },
+        "tags": [
+            "library"
+        ]
+    }
+}
